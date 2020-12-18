@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <chrono>
+#include <climits>
 #include "util/sha256.h"
 
 #define DIFFICULTY 5
