@@ -24,7 +24,7 @@ int main(int, char**) {
         std::string hash = sha256(msg + std::to_string(nonce));
         std::string target = prepareData();
         std::string c = hash.substr(0,target.length());
-        std::cout << "hash: " << hash << ", target: " << target << ", nonce: " << nonce << std::endl;
+        // std::cout << "hash: " << hash << ", target: " << target << ", nonce: " << nonce << std::endl;
         if (target == c) {
             std::chrono::milliseconds endMs = std::chrono::duration_cast< std::chrono::milliseconds >(
                 std::chrono::system_clock::now().time_since_epoch()
