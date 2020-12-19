@@ -6,4 +6,12 @@ set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 
 aux_source_directory(src DIR_SRCS)
 aux_source_directory(src/util DIR_SRCS_UTIL)
-add_executable(powtest  ${DIR_SRCS_UTIL} ${DIR_SRCS})
+
+IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+    MESSAGE(STATUS "current platform: Linux ")
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+    aux_source_directory(src/win32 DIR_SRCS_WIN32)
+    ADD_DEFINITIONS(-D ISWIN)
+    MESSAGE(STATUS "current platform: Windows")
+ENDIF()
+add_executable(powtest  ${DIR_SRCS_UTIL}  ${DIR_SRCS_WIN32} ${DIR_SRCS})
