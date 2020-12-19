@@ -12,11 +12,6 @@
 #include <unistd.h>
 #endif
 
-
-static struct option const long_options[] = {
-    {"difficulty", required_argument, NULL, 'd'}
-};
-
 void usage(){
     fprintf(stdout,
             "Usage: powtest [options...] <message>\n"
