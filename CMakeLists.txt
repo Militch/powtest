@@ -9,6 +9,7 @@ aux_source_directory(src/util DIR_SRCS_UTIL)
 
 IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
     MESSAGE(STATUS "current platform: Linux ")
+    ADD_DEFINITIONS(-D ISLINUX)
 ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Windows")
     aux_source_directory(src/win32 DIR_SRCS_WIN32)
     ADD_DEFINITIONS(-D ISWIN)

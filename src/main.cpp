@@ -6,7 +6,9 @@
 #include "util/sha256.h"
 #ifdef ISWIN
 #include "win32/wingetopt.h"
-#else 
+#endif
+
+#ifdef ISLINUX 
 #include <unistd.h>
 #endif
 
