@@ -6,7 +6,10 @@
 #include "util/sha256.h"
 #ifdef ISWIN
 #include "win32/wingetopt.h"
+#else 
+#include <unistd.h>
 #endif
+
 
 static struct option const long_options[] = {
     {"difficulty", required_argument, NULL, 'd'}
