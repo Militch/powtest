@@ -4,7 +4,7 @@
 #include <climits>
 #include <stdexcept>
 #include "util/sha256.h"
-#ifdef ISWIN
+#ifdef ISWIN32
 #include "win32/wingetopt.h"
 #else
 #include <unistd.h>
